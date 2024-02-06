@@ -35,4 +35,18 @@ git remote add origin git@github.com:%ИМЯ_АККАУНТА%/first-project.git
 Состояние `modified` означает, что Git сравнил содержимое файла с последней сохранённой версией и нашёл отличия. Например, файл был закоммичен и после этого изменён.  
 
 
+```mermaid
+graph LR;
+	untracked -- "git add" --> staged;
+	staged -- "changes" --> modified;
+	staged -- "git commit --> tracked";
+	tracked -- "changes" --> modified;
+	modified -- "git add" --> staged;
+```
+
+
+
+
+
+
 
